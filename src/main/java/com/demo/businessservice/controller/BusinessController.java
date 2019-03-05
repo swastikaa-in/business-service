@@ -21,7 +21,7 @@ public class BusinessController {
 
 
 
-    @RequestMapping(value="/tryme")
+    @RequestMapping(value="/trydme")
     public void sayHello(){
         System.out.println("Welcome");
     }
