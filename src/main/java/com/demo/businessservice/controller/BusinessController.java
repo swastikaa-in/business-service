@@ -19,20 +19,25 @@ public class BusinessController {
 	@Autowired
 	BusinessService businessService;
 
-	
+
+
+    @RequestMapping(value="/tryme")
+    public void sayHello(){
+        System.out.println("Welcome");
+    }
 	@RequestMapping(value = "v1/{strGreeting}", method = RequestMethod.GET)
 	public String sayGreeting(@PathVariable("strGreeting") String strGreeting) {
-	
+
 			return businessService.sayGreeting(strGreeting);
 
 	}
-	
+
 	@RequestMapping(value = "v1/employee/{empno}", method = RequestMethod.GET)
 	public Employee getEmployeeByEmpno(@PathVariable("empno") String empno) {
-	
+
 			return businessService.getEmployeeByEmpno(empno);
 
 	}
 
-	
+
 }
